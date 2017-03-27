@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/weatherapp.css">
+</head>
+
+
+<body>
+<div class="container" id="box-holder">
+  <div class="content-box">
+   <h1>Weather<img id="icon" alt="weather-icon" src="Images/allweather.jpg"></img>App</h1>
+   <h3>Powered by <a href="https://www.wunderground.com/">WUnderground<a/></h3>
+    <div class="content">
+      <div class="content-circles">
+        <p class="info" id="weather"></p>
+      </div>
+      <span class="title">Condition</span>
+    </div>
+
+   <div class="content">
+      <a href="#" id="hitbox">
+        <div class="content-circles" id="temperature">
+          <p class="info" id="temp"></p>
+          <div class="unit-switch">
+              <span class="unit"></span>
+          </div>
+       </div>
+      </a>
+      <span class="title">Temperature</span>
+    </div>
+
+    <div class="content">
+      <div class="content-circles">
+        <p class="info" id="location"></p>
+      </div>
+      <span class="title">Location</span>
+    </div>
+  </div>
+</div>
+
+
+ <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+ <script src="js/weatherapp.js"></script>
+
+</body>
+</html >
