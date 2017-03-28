@@ -98,31 +98,33 @@ function getHardCodedCoordinates(){
           getWeather(lat,lng);
 }
 
-function getPWSCoordinates(){
-  console.log('getting coorginates from user');
-  var address = $("#PWSid").val();
-    var lat = 52.219116;
-    var lng = -0.8743845000000001;
+function getWeatherForGivenCoordinates(){
+  console.log(' getWeatherForCoordinates()');
+  var lat = $("#lat").val();
+  var lng = $("#lng").val();
+
     getWeather(lat,lng);
-}
-
-function getMyLocation() {
-
-  console.log('in getCoordinatesForLocation() ');
-  geocode.geocodeAddress(address, (errorMessage, results) => {
-    if (errorMessage) {
-      console.log(errorMessage);
-    } else {
-      console.log(results.address);
-      // weather.getWeather(results.latitude, results.longitude, (errorMessage, weatherResults) => {
-      //   if (errorMessage) {
-      //     console.log(errorMessage);
-      //   } else {
-      //     console.log(`It's currently ${weatherResults.temperature}. It feels like ${weatherResults.apparentTemperature}.`);
-      }
-      });
+    unitViewer();
 
 }
+
+// function getMyLocation() {
+//
+//   console.log('in getCoordinatesForLocation() ');
+//   geocode.geocodeAddress(address, (errorMessage, results) => {
+//     if (errorMessage) {
+//       console.log(errorMessage);
+//     } else {
+//       console.log(results.address);
+//       // weather.getWeather(results.latitude, results.longitude, (errorMessage, weatherResults) => {
+//       //   if (errorMessage) {
+//       //     console.log(errorMessage);
+//       //   } else {
+//       //     console.log(`It's currently ${weatherResults.temperature}. It feels like ${weatherResults.apparentTemperature}.`);
+//       }
+//       });
+//
+// }
 
 function getMyLocation(){
   console.log('getMyLocation()');
@@ -140,8 +142,9 @@ function getMyLocation(){
 }
 
 $(document).ready(function(){
-  getMyLocation();
-//  getHardCodedCoordinates();
+//  getMyLocation();
+  //getHardCodedCoordinates();
+//  getWeatherForCoordinates();
   unitViewer();
   }
 );

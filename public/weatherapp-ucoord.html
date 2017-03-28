@@ -11,10 +11,20 @@
 
 
 <body>
+  <p><a href="/">Home</a></p>
+  <p>
+    This web-page shows weather for Coordinates Given by the User.
+  </p>
+
 <div class="container" id="box-capture">
-  <input type="text" id="adderessid"></input>
-  <button onclick="getCoordinatesForLocation()">Show Weather For Input</button>
-  <button onclick="getAddress()"> Hardcoded Location</button>
+  Enter Latitude - <input type="text" id="lat"></input>
+  Enter Longitude -<input type="text" id="lng"></input>
+  <button onclick="getWeatherForGivenCoordinates()">Weather for coordinates...</button>
+
+  <p>
+    Note: Errors: are not handled in case of invalid coordinates yet, to search again, refresh your page
+    Apologies for inconvenience and we will rectify the issue soon...
+  </p>
 </div>
 
 <div class="container" id="box-holder">
@@ -51,8 +61,8 @@
 
 
  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
- <script src="js/weatherapp.js"></script>
- <script src="js/geocode.js"></script>
+ <script src="js/weatherapp-ucoord.js"></script>
+<!-- <script src="js/geocode.js"></script>-->
 
 </body>
 </html >
